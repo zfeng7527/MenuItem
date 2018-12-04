@@ -1,16 +1,26 @@
 package ZhiFeng;
 
-public class Trio{
-    private String Sandwich;
-    private String Salad;
-    private String Drink;
+public class Trio implements MenuItem{
 
-    public trio(String Sandwich, String Salad, String Drink){
+    private Sandwich Sandwich;
+    private Salad Salad;
+    private Drink Drink;
+
+    public Trio(Sandwich Sandwich, Salad Salad, Drink Drink){
         this.Sandwich = Sandwich;
         this.Salad = Salad;
         this.Drink = Drink;
     }
-    return Sandwich();
-    return Salad();
-    return Drink();
+
+    public String getName(){
+        return this.Sandwich.getName() + "/" + this.Salad.getName() + "/" + this.Drink.getName();
+    }
+
+    public double getPrice(){
+        double sandwichPrice = Sandwich.getPrice();
+        double saladPrice = Salad.getPrice();
+        double drinkPrice = Drink.getPrice();
+
+        return sandwichPrice + saladPrice + drinkPrice;
+    }
 }

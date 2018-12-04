@@ -9,6 +9,11 @@ public class Drink implements MenuItem{
         this.name = name;
     }
 
-    return getPrice();
-    return getName();
+    public String getName(){
+        return name;
+    }
+    public double getPrice(){
+        return price;
+    }
+
 }
